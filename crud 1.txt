@@ -1,0 +1,60 @@
+
+php artisan crud:generate Posts --fields="title:string:required, body:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Carreras --fields="nombre:string:required, codigo:integer:required, mision:text, vision:text, lema:text ,fecha_creacion:date:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Docentes --fields="nombre:string:required, codigo:integer:required, CI:integer:required, direcion:string, telefono:integer, estado:boolean" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Autoridad --fields="nombre:string:required, codigo:integer:required, cargo:string:required, fecha_Inicio:date, fecha_fin:date, estado:boolean" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Materia --fields="nombre_materia:string:required, sigla_materia:string:required, codigo:integer:required,  fecha_creacion:date" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate PlanGlobal --fields="nombre_plan_global:string:required, sigla_plan_global:string:required, estado:boolean, codigo:integer:required,  fecha_creacion:datetime " --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Area --fields="nombre_area:string:required, estado:boolean, descripcion:text, codigo:integer:required,  fecha_creacion:date " --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate SubArea --fields="nombre_subarea:string:required, descripcion:text, estado:boolean, fecha_creacion:date" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Departamentos --fields="nombre_departamento:string:required, descripcion:text,  fecha_creacion:date " --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate JustificaionGeneral --fields="razon_de_ser_la_asignatura:text:required, por_que_se_ensena_y_por_que_esta_dentro_del_plan_de_estudios:text:required, en_que_medida_contribuye_a_la_formacion_integral_del_profesional:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate PropositosGenerales --fields="propositos_generales:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate ObjetivosGenerales --fields="objetivos_generales:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Unidades --fields="nombre_de_la_unidad:string:required, duracion_de_la_unidad_en_periodos_academicos:integer:required, objetivo_de_la_unidad:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Contenido --fields="contenido_de_la_unidad:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate MetodologiaEnsenanza --fields="tecnicas_predominantes_propuestas_para_la_unidad:text:required, evaluacion_de_la_unidad:text:required, bibliografia_especifica_de_la_unidad:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Evaluacion --fields="evaluacion:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+
+php artisan crud:generate Roles --fields="name:string:required, display_name:string:required, description:string" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Permissions --fields="name:string:required, display_name:string:required, description:string" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+
+php artisan crud:generate Users --fields="name:string:required, email:email:required, password:password:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Sistemapg --fields="nombre_de_facultad:string:required, descripcion:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+php artisan crud:generate Image --fields="original_name:text:required, filename:text:required" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+
+php artisan crud:generate Materia --fields="nombre_materia:string:required, sigla_materia:string:required, codigo:integer:required,  fecha_creacion:date" --route=yes --pk=id --view-path="cli" --namespace=Cli --route-group=cli
+
+php artisan crud:generate Carreras --fields="nombre:string:required, codigo:integer:required, mision:text, vision:text, lema:text ,fecha_creacion:date:required" --route=yes --pk=id --view-path="cli" --namespace=Cli --route-group=cli
+
+
+
+php artisan crud:generate Unidades --fields="nombre_de_la_unidad:string:required, duracion_de_la_unidad_en_periodos_academicos:integer:required, objetivo_de_la_unidad:text:required,contenido_de_la_unidad:text,tecnicas_predominantes_propuestas_para_la_unidad:text, evaluacion_de_la_unidad:text, bibliografia_especifica_de_la_unidad:text" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+
+php artisan crud:generate Grupo --fields="grupo:integer:required, control_de_plan_global:boolean" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
+
+
+
+php artisan crud:generate Configuracion --fields="nombre:string:required, estado:boolean,logo:string,facultad:string,organigrama:string,imgenuno:string,imgendos:string,imgentres:string,imgencuatro:string,imgencinco:string" --route=yes --pk=id --view-path="admin" --namespace=Admin --route-group=admin
